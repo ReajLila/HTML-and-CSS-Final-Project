@@ -1,0 +1,37 @@
+* {
+    margin: 0px !important;
+    padding: 0px !important; 
+    background-color: none !important;
+    display: block !important;
+    color: black !important;
+    /* width: 100% !important; */
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-size: 12pt !important;
+}
+*:not(.key) {
+    width: 100% !important;
+}
+img {
+    display: none !important;
+}
+.key {
+    display: inline !important;
+}
+body {
+    background-color: white !important;
+}
+
+#background img {
+    display: none !important;
+}
+svg *[stroke] {
+    stroke: black !important;
+}
+svg *[fill] {
+    fill: black !important;
+}
+script {
+    display: none;
+}

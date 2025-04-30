@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <meta name="description" content="Play Hangman online! Guess the word letter by letter in this classic and fun word game.">
+    <meta name="keywords" content="hangman, online hangman, word game, guessing game, play hangman, free hangman">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="background">
+        <!-- I don't want text to appear if it can't load the image so no alt -->
+        <img src="media/brickBackgroundEven.png" class="odd"> 
+        <img src="media/brickBackgroundOdd.png" class="even">
+    </div>
+    <header>
+        <h1>Hangman</h1>
+        <nav>
+            <ul>
+                <li><span onclick="changeDifficulty(0)">Easy</span></li>
+                <li><span onclick="changeDifficulty(1)">Normal</span></li>
+                <li><span onclick="changeDifficulty(2)">Medium</span></li>
+                <li><span onclick="changeDifficulty(3)">Hard</span></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hangman" class="row">
+        <aside id="hangman-display" class="col-12 col-lg-6">
+            <img src="media/stage.png" alt="hangman stage">
+            <svg  viewBox="0 0 838 809" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="head" cx="419" cy="165" r="69.5" stroke="white" stroke-width="15"/>
+                <rect class="torso" x="411" y="230" width="15" height="195" rx="7.5" fill="white"/>
+                <rect class="left-arm" x="418.886" y="231" width="15" height="146.545" rx="7.5" transform="rotate(45 418.886 231)" fill="white"/>
+                <rect class="right-arm" width="15" height="146.545" rx="7.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 511.623 345.229)" fill="white"/>
+                <rect class="left-leg" x="418.623" y="407" width="15" height="146.545" rx="7.5" transform="rotate(45 418.623 407)" fill="white"/>
+                <rect class="right-leg" width="15" height="146.545" rx="7.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 511.36 521.229)" fill="white"/>
+            </svg>    
+        </aside>
+        <acrticle id="boards" class="row col-12 col-lg-6">
+            <h2>Guess the word</h2>
+            <div id="blank-board" class="board row col-12 col-lg-12">
+            </div>
+
+            <h2 style="margin-top: 1em;">Pick a letter</h2>
+            <div id="letters-board" class="board row col-12 col-lg-12">
+            </div>
+        </acrticle>
+    </section>
+    <div id="result-overlay" class="hidden">
+        <img src="media/alive.png" alt="celebrating stickman">
+        <div>
+            <h3>asdfsadf</h3>
+            <p></p>
+            <button onclick="resetGame()">Try Again</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy;Reaj Lila</p>
+        <ul id="icon-bar">
+            <li><a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        </ul>
+    </footer>
+    <script src="hangman.js"></script>
+</body>
+</html>
